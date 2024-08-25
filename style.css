@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.btn {
+  user-select: none;
+  font-size: 35px;
+  background-color: gray;
+  padding: 10px 30px;
+  border-radius: 10%
+}
+
+.btn:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.grid {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 50px;
+}
+
+.cell {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  background-color: gray;
+  opacity: 0.6;
+  transition: 0.15s;
+}
+
+.cell:hover {
+  opacity: 1;
+}
+
+.select {
+  opacity: 1;
+  animation-name: select;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes select {
+  0% {
+    background-color: gray;
+  }
+  50% {
+    background-color: rgb(100, 100, 100);
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+.over {
+  pointer-events: none;
+}
+
+.winner {
+  background-color: pink;
+}
+
+.text {
+  font-size: 80px;
+}
